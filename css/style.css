@@ -1,0 +1,8 @@
+/* google fonts Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* font family inter by class name inter*/
+.inter  {
+    font-family: 'Inter', sans-serif;
+}
+
