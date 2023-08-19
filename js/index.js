@@ -174,11 +174,12 @@ function addToCalculationEntry(areaType, area) {
     console.log(areaType + " " + area);
     const calculationEntry = document.getElementById('calculation_entry');
 
-    // maintain serial number by number
+    // child count by childElementCount property
     const count = calculationEntry.childElementCount;
 
     const p = document.createElement('p');
     p.classList.add('my-4');
+    // maintain serial number by number using ${count + 1}
     p.innerHTML = `${count + 1}. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-success btn-sm px-2 ml-4 capitalize">Conver To <span class=" lowercase ">cm</span><sup>2</sup></button>`;
     calculationEntry.appendChild(p);
 }
