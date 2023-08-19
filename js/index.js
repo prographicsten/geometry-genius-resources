@@ -114,6 +114,9 @@ document.getElementById('triangle_btn').addEventListener('click', function () {
     // step 5
     setValueById('triangle_area', area);
     // console.log(area);
+
+    // add to calculations entry
+    addToCalculationEntry('Triangle', area);
 });
 
 document.getElementById('rectangle_btn').addEventListener('click', function () {
@@ -128,6 +131,9 @@ document.getElementById('rectangle_btn').addEventListener('click', function () {
 
     const area = firstInputField * secondInputField;
     setValueById('rectangle_area', area);
+
+    // add to calculations entry
+    addToCalculationEntry('Rectangle', area);
 });
 
 document.getElementById('parallelogram_btn').addEventListener('click', function () {
@@ -139,9 +145,12 @@ document.getElementById('parallelogram_btn').addEventListener('click', function 
         alert('Please enter a valid number base and height');
         return;
     }
-    
+
     const area = firstInputField * secondInputField;
     setValueById('parallelogram_area', area);
+
+    // add to calculations entry
+    addToCalculationEntry('Parallelogram', area);
 });
 
 
@@ -152,3 +161,24 @@ document.getElementById('parallelogram_btn').addEventListener('click', function 
  * 3. NaN means: Not a number. isNaN is checking whether the input is not a number or not
  * 
  */
+
+// add to calculations entry
+/**
+ * 1. get the element where you want to add the dynamic HTML element
+ * 2. create a new element you want to add
+ * 3. if needed add some class
+ * 4. set innerHTML. it could be bynamic Template string
+ * 5. append the created element as a child of the parent
+ */
+function addToCalculationEntry(areaType, area) {
+    console.log(areaType + " " + area);
+    const calculationEntry = document.getElementById('calculation_entry');
+
+    // maintain serial number by number
+    const count = calculationEntry.childElementCount;
+
+    const p = document.createElement('p');
+    p.classList.add('my-4');
+    p.innerHTML = `${count + 1}. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-success btn-sm px-2 ml-4 capitalize">Conver To <span class=" lowercase ">cm</span><sup>2</sup></button>`;
+    calculationEntry.appendChild(p);
+}
