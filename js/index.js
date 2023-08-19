@@ -92,6 +92,7 @@ function calculateParallelogramArea() {
 
 // =================================================================
 
+// Triangle function
 // step 1
 document.getElementById('triangle_btn').addEventListener('click', function () {
     // console.log('button clicked');
@@ -119,6 +120,7 @@ document.getElementById('triangle_btn').addEventListener('click', function () {
     addToCalculationEntry('Triangle', area);
 });
 
+// Rectangle function
 document.getElementById('rectangle_btn').addEventListener('click', function () {
     const firstInputField = inputTextValueById('rectangle_width');
     const secondInputField = inputTextValueById('rectangle_lenght');
@@ -136,6 +138,7 @@ document.getElementById('rectangle_btn').addEventListener('click', function () {
     addToCalculationEntry('Rectangle', area);
 });
 
+// Parallelogram function
 document.getElementById('parallelogram_btn').addEventListener('click', function () {
     const firstInputField = inputTextValueById('parallelogram_width');
     const secondInputField = inputTextValueById('parallelogram_height');
@@ -151,6 +154,61 @@ document.getElementById('parallelogram_btn').addEventListener('click', function 
 
     // add to calculations entry
     addToCalculationEntry('Parallelogram', area);
+});
+
+// Rhombus function
+document.getElementById('rhombus_btn').addEventListener('click', function () {
+    const firstInputField = inputTextValueById('rhombus_base');
+    const secondInputField = inputTextValueById('rhombus_height');
+
+    // validation
+    if (isNaN(firstInputField) || isNaN(secondInputField)) {
+        alert('Please enter a valid number base and height');
+        return;
+    }
+
+    const area = 0.5 * firstInputField * secondInputField;
+    setValueById('rhombus_area', area);
+
+    // add to calculations entry
+    addToCalculationEntry('Rhombus', area);
+});
+
+// Pentagon function
+document.getElementById('pentagon_btn').addEventListener('click', function () {
+    const firstInputField = inputTextValueById('pentagon_width');
+    const secondInputField = inputTextValueById('pentagon_lenght');
+
+    // validation
+    if (isNaN(firstInputField) || isNaN(secondInputField)) {
+        alert('Please enter a valid number base and height');
+        return;
+    }
+
+    const area = firstInputField * secondInputField;
+    setValueById('pentagon_area', area);
+
+    // add to calculations entry
+    addToCalculationEntry('Pentagon', area);
+});
+
+// Ellipse function
+document.getElementById('ellipse_btn').addEventListener('click', function () {
+    const firstInputField = inputTextValueById('ellipse_width');
+    const secondInputField = inputTextValueById('ellipse_height');
+
+    // validation
+    if (isNaN(firstInputField) || isNaN(secondInputField)) {
+        alert('Please enter a valid number base and height');
+        return;
+    }
+
+    const area = 3.14159265359 * firstInputField * secondInputField;
+    const areaToFixed = area.toFixed(2);
+    setValueById('ellipse_area', areaToFixed);
+
+    // add to calculations entry
+    addToCalculationEntry('Ellipse', areaToFixed);
 });
 
 
@@ -180,6 +238,6 @@ function addToCalculationEntry(areaType, area) {
     const p = document.createElement('p');
     p.classList.add('my-4');
     // maintain serial number by number using ${count + 1}
-    p.innerHTML = `${count + 1}. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-success btn-sm px-2 ml-4 capitalize">Conver To <span class=" lowercase ">cm</span><sup>2</sup></button>`;
+    p.innerHTML = `${count + 1}. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-success btn-sm px-2 ml-4 capitalize hover:text-black text-white">Conver To <span class=" lowercase ">cm</span><sup>2</sup></button>`;
     calculationEntry.appendChild(p);
 }
