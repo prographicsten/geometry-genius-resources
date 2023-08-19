@@ -6,6 +6,8 @@
     <title>Geometry Genius</title>
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- tailwind and daisyUI  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +20,7 @@
     <!-- main area start -->
     <main>
         <!-- container area 1 start -->
-        <div class="flex flex-col lg:flex-row mt-10">
+        <div class="flex flex-col lg:flex-row mt-10 mb-10">
             <!-- shape container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Triangle card -->
@@ -26,18 +28,18 @@
                     <figure><img class="mt-5 h-28" src="images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Triangle</h2>
-                      <p>Area (A) = 0.5 X b X h</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="triangle_base" placeholder="base">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = 0.5 <span class="font-medium text-red-500">x</span> b <span class="font-medium text-red-500">x</span> h</p>
+                      <div class="calulate_area flex justify-center items-center gap-3">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="triangle_base" placeholder="base">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="triangle_height" placeholder="height">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="triangle_height" placeholder="height">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="triangle_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="triangle_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button id="triangle_btn" class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
@@ -48,18 +50,18 @@
                     <figure><img class="mt-5 h-28" src="images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Rectangle</h2>
-                      <p>Area (A) = w X l</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="rectangle_width" placeholder="width">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = w <span class="font-medium text-red-500">x</span> l</p>
+                      <div class="calulate_area flex justify-center items-center gap-3">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="rectangle_width" placeholder="width">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="rectangle_lenght" placeholder="lenght">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="rectangle_lenght" placeholder="lenght">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="rectangle_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="rectangle_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button id="rectangle_btn" class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
@@ -70,18 +72,18 @@
                     <figure><img class="mt-5 h-28" src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Parallelogram</h2>
-                      <p>Area (A) = b X h</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="parallelogram_width" placeholder="base">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = b <span class="font-medium text-red-500">x</span> h</p>
+                      <div class="calulate_area flex justify-center items-center gap-3">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="parallelogram_width" placeholder="base">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="parallelogram_height" placeholder="height">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="parallelogram_height" placeholder="height">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="parallelogram_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="parallelogram_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button id="parallelogram_btn" class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
@@ -94,18 +96,18 @@
                     <figure><img class="mt-5 h-28" src="images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Rhombus</h2>
-                      <p>Area (A) = 0.5 X b X h</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="rhombus_base" placeholder="base">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = 0.5 <span class="font-medium text-red-500">x</span> d<sub>1</sub> <span class="font-medium text-red-500">x</span> d<sub>2</sub></p>
+                      <div class="calulate_area flex justify-center items-center gap-3 ">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="rhombus_base" placeholder="d-1...">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="rhombus_height" placeholder="height">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="rhombus_height" placeholder="d-2...">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="rhombus_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="rhombus_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
@@ -116,18 +118,18 @@
                     <figure><img class="mt-5 h-28" src="images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Pentagon</h2>
-                      <p>Area (A) = w X l</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="pentagon_width" placeholder="width">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = p <span class="font-medium text-red-500">x</span> b</p>
+                      <div class="calulate_area flex justify-center items-center gap-3 ">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="pentagon_width" placeholder="p...">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="pentagon_lenght" placeholder="lenght">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="pentagon_lenght" placeholder="b...">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="pentagon_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="pentagon_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
@@ -138,18 +140,18 @@
                     <figure><img class="mt-5 h-28" src="images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="font-bold text-2xl">Ellipse</h2>
-                      <p>Area (A) = b X h</p>
-                      <div class="calulate_area flex justify-center items-center gap-5">
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="ellipse_width" placeholder="base">
-                            <span class="text-xl">*</span>
+                      <p>Area (A) = <span class="text-2xl">π</span>ab</p>
+                      <div class="calulate_area flex justify-center items-center gap-3 ">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="ellipse_width" placeholder="a...">
+                            <span class="text-xl text-red-500">*</span>
                         </p>
-                        <p class="flex justify-around gap-2">
-                            <input class="w-[80%] px-2 bg-gray-100" type="text" name="" id="ellipse_height" placeholder="height">
+                        <p class="flex justify-around gap-2 items-center">
+                            <input class="w-[80%] px-2 py-2 bg-gray-100" type="text" name="" id="ellipse_height" placeholder="b...">
                             <span>cm</span>
                         </p>
                       </div>
-                      <p class="font-semibold text-2xl text-left mt-2">Area: <span id="ellipse_area">0</span> cm <sup>2</sup></p>
+                      <p class="font-semibold text-sm text-left mt-2">Area: <span id="ellipse_area">0</span> cm <sup>2</sup></p>
                       <div class="card-actions justify-center mt-4">
                         <button class="btn btn-primary capitalize w-full font-bold" >Calculate</button>
                       </div>
